@@ -2,5 +2,5 @@
 var YAML = require("yamljs");
 
 // Load languages.yml file
-var nativeObject = YAML.load("myfile.yml");
+var nativeObject = YAML.load("./languages.yml");
 debugger;
