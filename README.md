@@ -1,4 +1,4 @@
-github-colors
+GitHub Colors
 =============
 GitHub color and file extensions mapping
 
@@ -11,6 +11,8 @@ $ ./build.sh
 ```
 
 The JSON file will be saved in `github-colors.json` file.
+
+Also, you can find the JSON files in [dist](./dist) directory.
 
 # License
 See the [LICENSE](./LICENSE) file.
