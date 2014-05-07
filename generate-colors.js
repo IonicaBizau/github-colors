@@ -9,7 +9,7 @@ for (var pLanguage in Colors) {
         continue;
     }
 
-    output += "![](http://www.placehold.it/200/" + cpLanguage.color + "/ffffff&text=" + pLanguage + ")\n";
+    output += "![](http://www.placehold.it/200/" + cpLanguage.color.substring(1) + "/ffffff&text=" + pLanguage + ")\n";
 }
 
 console.log(output);
