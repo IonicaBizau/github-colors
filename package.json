@@ -1,0 +1,28 @@
+{
+  "name": "github-colors",
+  "version": "0.0.0",
+  "description": "GitHub color and file extensions mapping",
+  "main": "convert.js",
+  "dependencies": {
+    "yamljs": "^0.1.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:IonicaBizau/github-colors.git"
+  },
+  "keywords": [
+    "github",
+    "colors",
+    "node"
+  ],
+  "author": "Ionică Bizău <bizauionica@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/github-colors/issues"
+  },
+  "homepage": "https://github.com/IonicaBizau/github-colors"
+}
