@@ -1,4 +1,4 @@
-#!/usr/bin/env shell
+#!/usr/bin/env bash
 echo "Dowloading languages.yml ..."
 wget https://raw.githubusercontent.com/github/linguist/master/lib/linguist/languages.yml
 
