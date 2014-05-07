@@ -1,6 +1,6 @@
 {
   "name": "github-colors",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "GitHub color and file extensions mapping",
   "main": "convert.js",
   "dependencies": {
