@@ -1,6 +1,8 @@
-// Dependencies
-var YAML = require("yamljs");
-
-// Load languages.yml file
-var nativeObject = YAML.load("./languages.yml");
-debugger;
+require("fs").writeFileSync(
+    "./github-colors.json"
+  , JSON.stringify(
+        require("yamljs").load("./languages.yml")
+      , null
+      , 4
+    )
+);
