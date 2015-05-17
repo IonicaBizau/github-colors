@@ -3,10 +3,6 @@
   "version": "0.1.0",
   "description": "GitHub color and file extensions mapping",
   "main": "convert.js",
-  "dependencies": {
-    "yamljs": "^0.1.5"
-  },
-  "devDependencies": {},
   "scripts": {
     "build": "./build/main",
     "install": "./build/main",
@@ -26,5 +22,15 @@
   "bugs": {
     "url": "https://github.com/IonicaBizau/github-colors/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/github-colors"
+  "homepage": "https://github.com/IonicaBizau/github-colors",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "bug-killer": "^1.0.0",
+    "tinyreq": "^1.0.0",
+    "yamljs": "^0.1.6",
+    "streamp": "^1.0.0"
+  },
+  "devDependencies": {}
 }
