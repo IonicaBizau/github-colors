@@ -1,0 +1,37 @@
+#!/usr/bin/env node
+
+// Dependencies
+var TinyReq = require("tinyreq")
+  , YamlJS = require("yamljs")
+  , Fs = require("fs")
+  , Logger = require("bug-killer")
+  , Streamp = require("streamp")
+  ;
+
+// Configurations
+Logger.config.logLevel = 4;
+Logger.config.displayDate = false;
+
+// Download languages.yml
+Logger.log("Downloading the GitHub language colors.", "info");
+TinyReq("https://raw.githubusercontent.com/github/linguist/master/lib/linguist/languages.yml", function (err, languages) {
+    if (err) {
+        Logger.log(err, "error");
+        return process.exit(1);
+    }
+    Logger.log("Parsing the yml file.", "info")
+
+    var parsed = YamlJS.parse(languages)
+      , now = new Date()
+      , stream = new Streamp.writable(__dirname + "/../dist/" + now.getDate() + "-" + (now.getMonth() + 1) + "-" + now.getFullYear() + "/github-colors.json")
+      ;
+
+    Fs.writeFile(__dirname + "/../lib/latest.json", JSON.stringify(parsed), function (err) {
+        if (err) {
+            Logger.log(err, "error");
+            return process.exit(2);
+        }
+        stream.write(JSON.stringify(parsed, null, 2));
+        stream.end();
+    });
+});

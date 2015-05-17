@@ -8,6 +8,8 @@
   },
   "devDependencies": {},
   "scripts": {
+    "build": "./build/main",
+    "install": "./build/main",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
