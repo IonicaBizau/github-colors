@@ -4,4 +4,5 @@
 *.log
 node_modules
 languages.yml
-./github-colors.json
+lib/extensions.json
+lib/colors.json
