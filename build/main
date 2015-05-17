@@ -6,6 +6,7 @@ var TinyReq = require("tinyreq")
   , Fs = require("fs")
   , Logger = require("bug-killer")
   , Streamp = require("streamp")
+  , Ul = require("ul")
   ;
 
 // Configurations
@@ -22,18 +23,39 @@ TinyReq("https://raw.githubusercontent.com/github/linguist/master/lib/linguist/l
     Logger.log("Parsing the yml file.", "info")
 
     var parsed = YamlJS.parse(languages)
+      , extensions = {}
+      , cLng = null
+      , cLngExts = null
       , now = new Date()
-      , stream = new Streamp.writable(__dirname + "/../dist/" + now.getDate() + "-" + (now.getMonth() + 1) + "-" + now.getFullYear() + "/github-colors.json")
+      , dirName = __dirname + "/../dist/" + now.getDate() + "-" + (now.getMonth() + 1) + "-" + now.getFullYear() + "/"
+      , libDir = __dirname + "/../lib/"
+      , colorsStr = new Streamp.writable(dirName + "colors.json")
+      , extStr = new Streamp.writable(dirName + "extensions.json")
+      , libColorsStr = new Streamp.writable(libDir + "colors.json")
+      , libExtStr = new Streamp.writable(libDir + "extensions.json")
       ;
 
-    // Write the files
-    Fs.writeFile(__dirname + "/../lib/latest.json", JSON.stringify(parsed), function (err) {
-        if (err) {
-            Logger.log(err, "error");
-            return process.exit(2);
-        }
-        stream.write(JSON.stringify(parsed, null, 2));
-        stream.end();
-        Logger.log("Done successfully.", "info");
+    Object.keys(parsed).forEach(function (cLang) {
+        cLng = Ul.merge(parsed[cLang], {
+            extensions: []
+          , aliases: []
+        });
+        cLngExts = cLng.aliases.concat(cLng.extensions);
+        cLngExts.forEach(function (cExt) {
+            extensions[cExt.replace(/^\./, "")] = cLng;
+        });
     });
+
+    colorsStr.write(JSON.stringify(parsed, null, 2));
+    extStr.write(JSON.stringify(extensions, null, 2));
+
+    libColorsStr.write(JSON.stringify(parsed));
+    libExtStr.write(JSON.stringify(extensions));
+
+    colorsStr.end();
+    extStr.end();
+    libColorsStr.end();
+    libExtStr.end();
+
+    Logger.log("Done successfully.", "info");
 });
