@@ -26,6 +26,7 @@ TinyReq("https://raw.githubusercontent.com/github/linguist/master/lib/linguist/l
       , extensions = {}
       , cLng = null
       , cLngExts = null
+      , output = ""
       , now = new Date()
       , dirName = __dirname + "/../dist/" + now.getDate() + "-" + (now.getMonth() + 1) + "-" + now.getFullYear() + "/"
       , libDir = __dirname + "/../lib/"
@@ -33,6 +34,7 @@ TinyReq("https://raw.githubusercontent.com/github/linguist/master/lib/linguist/l
       , extStr = new Streamp.writable(dirName + "extensions.json")
       , libColorsStr = new Streamp.writable(libDir + "colors.json")
       , libExtStr = new Streamp.writable(libDir + "extensions.json")
+      , mdColorsStr = new Streamp.writable(__dirname + "/../colors.md")
       ;
 
     Object.keys(parsed).forEach(function (cLang) {
@@ -44,6 +46,8 @@ TinyReq("https://raw.githubusercontent.com/github/linguist/master/lib/linguist/l
         cLngExts.forEach(function (cExt) {
             extensions[cExt.replace(/^\./, "")] = cLng;
         });
+        if (!cLng.color) { return; }
+        output += "![](http://www.placehold.it/200/" + cLng.color.substring(1) + "/ffffff&text=" + encodeURIComponent(cLang) + ")\n";
     });
 
     colorsStr.write(JSON.stringify(parsed, null, 2));
@@ -51,6 +55,8 @@ TinyReq("https://raw.githubusercontent.com/github/linguist/master/lib/linguist/l
 
     libColorsStr.write(JSON.stringify(parsed));
     libExtStr.write(JSON.stringify(extensions));
+
+    mdColorsStr.write(output);
 
     colorsStr.end();
     extStr.end();
