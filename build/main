@@ -26,6 +26,7 @@ TinyReq("https://raw.githubusercontent.com/github/linguist/master/lib/linguist/l
       , stream = new Streamp.writable(__dirname + "/../dist/" + now.getDate() + "-" + (now.getMonth() + 1) + "-" + now.getFullYear() + "/github-colors.json")
       ;
 
+    // Write the files
     Fs.writeFile(__dirname + "/../lib/latest.json", JSON.stringify(parsed), function (err) {
         if (err) {
             Logger.log(err, "error");
@@ -33,5 +34,6 @@ TinyReq("https://raw.githubusercontent.com/github/linguist/master/lib/linguist/l
         }
         stream.write(JSON.stringify(parsed, null, 2));
         stream.end();
+        Logger.log("Done successfully.", "info");
     });
 });
