@@ -9,18 +9,14 @@ var TinyReq = require("tinyreq")
   , Ul = require("ul")
   ;
 
-// Configurations
-Logger.config.logLevel = 4;
-Logger.config.displayDate = false;
-
 // Download languages.yml
-Logger.log("Downloading the GitHub language colors.", "info");
+Logger.log("Downloading the GitHub language colors.");
 TinyReq("https://raw.githubusercontent.com/github/linguist/master/lib/linguist/languages.yml", function (err, languages) {
     if (err) {
         Logger.log(err, "error");
         return process.exit(1);
     }
-    Logger.log("Parsing the yml file.", "info")
+    Logger.log("Parsing the yml file.")
 
     var parsed = YamlJS.parse(languages)
       , extensions = {}
@@ -63,5 +59,5 @@ TinyReq("https://raw.githubusercontent.com/github/linguist/master/lib/linguist/l
     libColorsStr.end();
     libExtStr.end();
 
-    Logger.log("Done successfully.", "info");
+    Logger.log("Done successfully.");
 });
