@@ -27,11 +27,11 @@
     "example": "example"
   },
   "dependencies": {
-    "streamp": "^1.0.0",
-    "ul": "^2.1.0",
+    "streamp": "^2.0.0",
+    "ul": "^5.0.0",
     "yamljs": "^0.1.6",
-    "tinyreq": "^1.0.0",
-    "bug-killer": "^1.0.0"
+    "tinyreq": "^2.0.1",
+    "bug-killer": "^4.0.0"
   },
   "devDependencies": {}
 }
