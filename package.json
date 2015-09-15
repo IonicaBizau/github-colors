@@ -1,7 +1,7 @@
 {
   "name": "github-colors",
-  "version": "1.0.0",
-  "description": "GitHub color and file extensions mapping",
+  "version": "2.0.0",
+  "description": "GitHub colors and file extensions mapping",
   "main": "lib/index.js",
   "scripts": {
     "build": "./build/main",
@@ -18,7 +18,7 @@
     "node"
   ],
   "author": "Ionică Bizău <bizauionica@gmail.com>",
-  "license": "MIT",
+  "license": "KINDLY",
   "bugs": {
     "url": "https://github.com/IonicaBizau/github-colors/issues"
   },
