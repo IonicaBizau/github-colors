@@ -17,7 +17,7 @@
     "colors",
     "node"
   ],
-  "author": "Ionică Bizău <bizauionica@gmail.com>",
+  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
   "license": "KINDLY",
   "bugs": {
     "url": "https://github.com/IonicaBizau/github-colors/issues"
@@ -32,6 +32,17 @@
     "yamljs": "^0.1.6",
     "tinyreq": "^2.0.1",
     "bug-killer": "^4.0.0"
+  },
+  "blah": {
+    "title": "GitHub Colors",
+    "description": [
+      {
+        "h2": "[Colors](/colors.md)! :art:"
+      },
+      {
+        "p": "If you like to see the language colors collection, click [here](/colors.md)."
+      }
+    ]
   },
   "devDependencies": {}
 }
