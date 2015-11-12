@@ -1,4 +1,5 @@
 # GitHub Colors [![Support this project][donate-now]][paypal-donations]
+
 GitHub colors and file extensions mapping
 
 ## [Colors](/colors.md)! :art:
