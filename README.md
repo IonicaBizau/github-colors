@@ -1,3 +1,4 @@
+
 # GitHub Colors [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Version](https://img.shields.io/npm/v/github-colors.svg)](https://www.npmjs.com/package/github-colors) [![Downloads](https://img.shields.io/npm/dt/github-colors.svg)](https://www.npmjs.com/package/github-colors) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
 > GitHub colors and file extensions mapping
@@ -6,13 +7,17 @@
 
 If you like to see the language colors collection, click [here](/colors.md).
 
-## Installation
+
+## :cloud: Installation
 
 ```sh
 $ npm i --save github-colors
 ```
 
-## Example
+
+## :clipboard: Example
+
+
 
 ```js
 var GitHubColors = require("github-colors");
@@ -21,7 +26,8 @@ console.log(GitHubColors.get("C++"));
 console.log(GitHubColors.ext("cpp"));
 ```
 
-## Documentation
+## :memo: Documentation
+
 
 ### `init(ext)`
 Inits the GitHub extensions/colors.
@@ -52,15 +58,18 @@ Get the color object for the provided extension.
 #### Return
 - **Object** The color that was found.
 
-## How to contribute
+
+
+## :yum: How to contribute
 Have an idea? Found a bug? See [how to contribute][contributing].
 
-## Where is this library used?
+## :dizzy: Where is this library used?
 If you are using this library in one of your projects, add it in this list. :sparkles:
 
- - [`gh-polyglot`](https://github.com/IonicaBizau/node-gh-polyglot)
 
-## License
+ - [`gh-polyglot`](https://github.com/IonicaBizau/node-gh-polyglot)—Get language stats about GitHub users and repositories.
+
+## :scroll: License
 
 [MIT][license] © [Ionică Bizău][website]
 
