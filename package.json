@@ -1,6 +1,6 @@
 {
   "name": "github-colors",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "GitHub colors and file extensions mapping",
   "main": "lib/index.js",
   "scripts": {
@@ -44,5 +44,16 @@
       }
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "files": [
+    "bin/",
+    "app/",
+    "lib/",
+    "dist/",
+    "src/",
+    "resources/",
+    "menu/",
+    "cli.js",
+    "index.js"
+  ]
 }
