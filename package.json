@@ -54,6 +54,7 @@
     "resources/",
     "menu/",
     "scripts/",
+    "build/",
     "cli.js",
     "index.js"
   ]
