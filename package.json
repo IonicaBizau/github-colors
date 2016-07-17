@@ -1,11 +1,11 @@
 {
   "name": "github-colors",
-  "version": "2.2.5",
+  "version": "2.2.6",
   "description": "GitHub colors and file extensions mapping",
   "main": "lib/index.js",
   "scripts": {
-    "build": "./build/main",
-    "install": "./build/main",
+    "build": "node ./build/main",
+    "install": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
