@@ -1,6 +1,6 @@
 {
   "name": "github-colors",
-  "version": "2.2.7",
+  "version": "2.2.8",
   "description": "GitHub colors and file extensions mapping",
   "main": "lib/index.js",
   "scripts": {
@@ -27,11 +27,11 @@
     "example": "example"
   },
   "dependencies": {
+    "bug-killer": "^4.0.0",
+    "js-yaml": "^3.6.1",
     "streamp": "^2.0.0",
-    "ul": "^5.0.0",
-    "yamljs": "^0.1.6",
-    "tinyreq": "^2.0.1",
-    "bug-killer": "^4.0.0"
+    "tinyreq": "^3.1.3",
+    "ul": "^5.0.0"
   },
   "blah": {
     "title": "GitHub Colors",

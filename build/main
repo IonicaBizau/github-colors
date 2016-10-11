@@ -2,7 +2,7 @@
 
 // Dependencies
 var TinyReq = require("tinyreq")
-  , YamlJS = require("yamljs")
+  , yaml = require("js-yaml")
   , Fs = require("fs")
   , Logger = require("bug-killer")
   , Streamp = require("streamp")
@@ -18,7 +18,7 @@ TinyReq("https://raw.githubusercontent.com/github/linguist/master/lib/linguist/l
     }
     Logger.log("Parsing the yml file.")
 
-    var parsed = YamlJS.parse(languages)
+    var parsed = yaml.load(languages)
       , extensions = {}
       , cLng = null
       , cLngExts = null
