@@ -5,6 +5,10 @@
 
 > GitHub colors and file extensions mapping
 
+> Data provided by the GitHub [Linguist repo][lin]
+
+[lin]://github.com/github/linguist/blob/master/lib/linguist/languages.yml
+
 ## [Colors](/colors.md)! :art:
 
 If you like to see the language colors collection, click [here](/colors.md).
