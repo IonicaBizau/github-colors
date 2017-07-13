@@ -6,6 +6,7 @@ You can see below the API reference of this module.
 Inits the GitHub extensions/colors.
 
 #### Params
+
 - **Boolean** `ext`: If `true`, the extensions will be initialized.
 
 #### Return
@@ -15,6 +16,7 @@ Inits the GitHub extensions/colors.
 Gets the color object for the provided language.
 
 #### Params
+
 - **String** `lang`: The language to get the color for.
 - **Boolean** `handleOthers`: If `false` and the color is not found `null` will be returned. Otherwise a gray color will be returned.
 
@@ -25,6 +27,7 @@ Gets the color object for the provided language.
 Get the color object for the provided extension.
 
 #### Params
+
 - **String** `ext`: The extension to get the color for.
 - **Boolean** `handleOthers`: If `false` and the color is not found `null` will be returned. Otherwise a gray color will be returned.
 
