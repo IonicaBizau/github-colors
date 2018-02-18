@@ -32,7 +32,68 @@ yarn add github-colors
 var GitHubColors = require("github-colors");
 
 console.log(GitHubColors.get("C++"));
+// { type: 'programming',
+//   ace_mode: 'c_cpp',
+//   codemirror_mode: 'clike',
+//   codemirror_mime_type: 'text/x-c++src',
+//   color: '#f34b7d',
+//   aliases: [ 'cpp' ],
+//   extensions:
+//    [ '.cpp',
+//      '.c++',
+//      '.cc',
+//      '.cp',
+//      '.cxx',
+//      '.h',
+//      '.h++',
+//      '.hh',
+//      '.hpp',
+//      '.hxx',
+//      '.inc',
+//      '.inl',
+//      '.ipp',
+//      '.re',
+//      '.tcc',
+//      '.tpp' ],
+//   language_id: 43 }
+
 console.log(GitHubColors.ext("cpp"));
+// { extensions:
+//    [ '.cpp',
+//      '.c++',
+//      '.cc',
+//      '.cp',
+//      '.cxx',
+//      '.h',
+//      '.h++',
+//      '.hh',
+//      '.hpp',
+//      '.hxx',
+//      '.inc',
+//      '.inl',
+//      '.ipp',
+//      '.re',
+//      '.tcc',
+//      '.tpp' ],
+//   aliases: [ 'cpp' ],
+//   type: 'programming',
+//   ace_mode: 'c_cpp',
+//   codemirror_mode: 'clike',
+//   codemirror_mime_type: 'text/x-c++src',
+//   color: '#f34b7d',
+//   language_id: 43 }
+
+
+// CMake doesn't have a color, so we specify in the second argument that we need to have the default color.
+console.log(GitHubColors.get("CMake", true));
+// { type: 'programming',
+//   extensions: [ '.cmake', '.cmake.in' ],
+//   filenames: [ 'CMakeLists.txt' ],
+//   ace_mode: 'text',
+//   codemirror_mode: 'cmake',
+//   codemirror_mime_type: 'text/x-cmake',
+//   language_id: 47,
+//   color: '#ccc' }
 ```
 
 
@@ -67,7 +128,7 @@ Gets the color object for the provided language.
 #### Params
 
 - **String** `lang`: The language to get the color for.
-- **Boolean** `handleOthers`: If `false` and the color is not found `null` will be returned. Otherwise a gray color will be returned.
+- **Boolean** `handleOthers`: If `false` and the color is not found `undefined` will be returned. Otherwise a gray color will be returned.
 
 #### Return
 - **Object** The color that was found.
@@ -78,7 +139,7 @@ Get the color object for the provided extension.
 #### Params
 
 - **String** `ext`: The extension to get the color for.
-- **Boolean** `handleOthers`: If `false` and the color is not found `null` will be returned. Otherwise a gray color will be returned.
+- **Boolean** `handleOthers`: If `false` and the color is not found `undefined` will be returned. Otherwise a gray color will be returned.
 
 #### Return
 - **Object** The color that was found.
@@ -96,6 +157,7 @@ this takes time. You can integrate and use these projects in your applications *
 
 However, if you get some profit from this or just want to encourage me to continue creating stuff, there are few ways you can do it:
 
+
  - Starring and sharing the projects you like :rocket:
  - [![Buy me a book][badge_amazon]][amazon]—I love books! I will remember you after years if you buy me one. :grin: :book:
  - [![PayPal][badge_paypal]][paypal-donations]—You can make one-time donations via PayPal. I'll probably buy a ~~coffee~~ tea. :tea:
@@ -103,6 +165,7 @@ However, if you get some profit from this or just want to encourage me to contin
  - **Bitcoin**—You can send me bitcoins at this address (or scanning the code below): `1P9BRsmazNQcuyTxEqveUsnf5CERdq35V6`
 
     ![](https://i.imgur.com/z6OQI95.png)
+
 
 Thanks! :heart:
 
@@ -118,14 +181,15 @@ If you are using this library in one of your projects, add it in this list. :spa
 
 [MIT][license] © [Ionică Bizău][website]
 
-[badge_patreon]: http://ionicabizau.github.io/badges/patreon.svg
-[badge_amazon]: http://ionicabizau.github.io/badges/amazon.svg
-[badge_paypal]: http://ionicabizau.github.io/badges/paypal.svg
-[badge_paypal_donate]: http://ionicabizau.github.io/badges/paypal_donate.svg
+
+[badge_patreon]: https://ionicabizau.github.io/badges/patreon.svg
+[badge_amazon]: https://ionicabizau.github.io/badges/amazon.svg
+[badge_paypal]: https://ionicabizau.github.io/badges/paypal.svg
+[badge_paypal_donate]: https://ionicabizau.github.io/badges/paypal_donate.svg
+
 [patreon]: https://www.patreon.com/ionicabizau
 [amazon]: http://amzn.eu/hRo9sIZ
 [paypal-donations]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RVXDDLKKLQRJW
-[donate-now]: http://i.imgur.com/6cMbHOC.png
 
 [license]: http://showalicense.com/?fullname=Ionic%C4%83%20Biz%C4%83u%20%3Cbizauionica%40gmail.com%3E%20(https%3A%2F%2Fionicabizau.net)&year=2014#license-mit
 [website]: https://ionicabizau.net

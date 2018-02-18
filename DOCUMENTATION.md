@@ -18,7 +18,7 @@ Gets the color object for the provided language.
 #### Params
 
 - **String** `lang`: The language to get the color for.
-- **Boolean** `handleOthers`: If `false` and the color is not found `null` will be returned. Otherwise a gray color will be returned.
+- **Boolean** `handleOthers`: If `false` and the color is not found `undefined` will be returned. Otherwise a gray color will be returned.
 
 #### Return
 - **Object** The color that was found.
@@ -29,7 +29,7 @@ Get the color object for the provided extension.
 #### Params
 
 - **String** `ext`: The extension to get the color for.
-- **Boolean** `handleOthers`: If `false` and the color is not found `null` will be returned. Otherwise a gray color will be returned.
+- **Boolean** `handleOthers`: If `false` and the color is not found `undefined` will be returned. Otherwise a gray color will be returned.
 
 #### Return
 - **Object** The color that was found.
