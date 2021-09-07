@@ -261,7 +261,6 @@ If you are using this library in one of your projects, add it in this list. :spa
 
  - `gh-polyglot`
  - `github-explorer`
- - `@agilesprints/front-common`
 
 
 
