@@ -21,7 +21,7 @@ Gets the color object for the provided language.
 - **Boolean** `handleOthers`: If `false` and the color is not found `undefined` will be returned. Otherwise a gray color will be returned.
 
 #### Return
-- **Object** The color that was found.
+- **Object|undefined** The color that was found.
 
 ### `ext(ext, handleOthers)`
 Get the color object for the provided extension.
@@ -32,5 +32,5 @@ Get the color object for the provided extension.
 - **Boolean** `handleOthers`: If `false` and the color is not found `undefined` will be returned. Otherwise a gray color will be returned.
 
 #### Return
-- **Object** The color that was found.
+- **Object|undefined** The color that was found.
 

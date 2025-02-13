@@ -1,6 +1,6 @@
 {
   "name": "github-colors",
-  "version": "2.2.20",
+  "version": "2.2.21",
   "description": "GitHub colors and file extensions mapping",
   "main": "lib/index.js",
   "scripts": {
@@ -56,6 +56,8 @@
     "menu/",
     "cli.js",
     "index.js",
+    "index.d.ts",
+    "package-lock.json",
     "bloggify.js",
     "bloggify.json",
     "bloggify/"
